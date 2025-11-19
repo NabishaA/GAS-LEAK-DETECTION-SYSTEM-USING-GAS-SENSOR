@@ -1,66 +1,105 @@
-# GAS-LEAK-DETECTION-SYSTEM-USING-GAS-SENSOR
+## Name: NABISHA A
+## Reg No: 212223060177
+## Slot : 4X4-5
+
+# OBSTACLE-DETECTION-SYSTEM-USING-ULTRASONIC-SENSOR
 
 ## Aim:
-	To measure the air quality using Gas Sensor  MQ-2 with Arduino UNO Board/ESP-32 using Tinker CAD.
+To design and simulate a distance measurement system using an ultrasonic sensor HC-SR04 interfaced with an Arduino Uno board in Tinkercad.
 
 ## Hardware / Software Tools required:
-	PC/ Laptop with Internet connection
-  Tinker CAD tool (Online)
-	Arduino UNO Board/ESP-32
-  Gas sensor (MQ-2)
-	
-## Circuit Diagram:
-
- 
-
-
-
-
-## Theory :
- The Arduino Uno is powered by the ATmega328P, an 8-bit microcontroller that runs at 16 MHz. It has 32 KB of flash memory, 2 KB of SRAM, and 1 KB of EEPROM. The board 
-has 14 digital I/O pins (of which 6 can be used as PWM outputs) and 6 analog input pins. These pins allow the board to interface with various sensors, actuators, and other devices.
-The Arduino Uno can be powered via a USB connection or an external power supply. The board has a built-in voltage regulator to manage power from 7 to 12 volts.
-The board is programmable using the Arduino IDE (Integrated Development Environment), which supports a simplified version of C/C++. The code, known as a "sketch," is uploaded to the board via a USB connection. The Uno has a USB-B port, which is used for communication with a computer. The USB connection also powers the board when connected. The board includes a reset button that restarts the microcontroller, useful during programming and troubleshooting. The In-Circuit Serial Programming (ICSP) header allows for low-level programming of the microcontroller or firmware updates. The Uno has a built-in LED on pin 13, commonly used for simple tests and debugging.
-Procedure:
-Step 1: Set Up the Tinkercad Environment
-3.	Log in to Tinkercad: Open Tinkercad in your web browser and log in to your account.
-4.	Create a New Circuit: In the Tinkercad dashboard, click on "Circuits" and then select "Create New Circuit."
-Step 2: Add Components to the Circuit
-6.	Arduino Uno: Drag an Arduino Uno board from the components panel onto the workspace.
-7.	Gas Sensor: Search for the TMP36 sensor in the components panel and drag it into the workspace.
-8.	Breadboard: Drag a small breadboard to the workspace to help with wiring connections.
-9.	Resistor (Optional): A resistor may not be necessary for this simple setup, but you can include it for more accurate readings.
-10.	Wires: Use wires to connect the components.
-Step 3: Connect the MQ-2 Gas Sensor to Arduino:
-•	MQ-2 Pins:
-o	VCC: Connect this pin to the Arduino 5V pin.
-o	GND: Connect this pin to the Arduino GND pin.
-o	Analog Output (A0): Connect this pin to an analog input pin on the Arduino (e.g., A0).
-o	Digital Output (D0): (Optional) Connect this pin to a digital input pin on the Arduino if you want to use the sensor’s digital threshold output.
-Breadboard Wiring:
-•	MQ-2 VCC to Arduino 5V: Use a wire to connect the VCC pin of the MQ-2 sensor to the 5V rail on the breadboard (which is connected to Arduino 5V).
-•	MQ-2 GND to Arduino GND: Connect the GND pin of the MQ-2 sensor to the ground rail on the breadboard (connected to Arduino GND).
-•	MQ-2 Analog Output (A0) to Arduino Analog Pin (A0): Connect the analog output pin of the sensor to Arduino’s A0 pin.
-•	(Optional) MQ-2 Digital Output (D0) to Arduino Digital Pin (e.g., D2): Connect the digital output pin if you want to detect gas concentration threshold digitally.
-Step 4: Write the Arduino Code
-•	Code Editor: Click on the "Code" button at the top of the Tinkercad workspace to open the code editor.
-•	Set the Coding Mode: Ensure the editor is in "Text" mode to write your code in C/C++.
-•	Enter the Code: Write the following code from the MQ-2  sensor
-Step 5: Simulate the Circuit
-•	Start Simulation: Click the "Start Simulation" button at the top of the workspace to run the circuit and code.
-•	Monitor Output: Open the serial monitor by clicking the "Serial Monitor" button to view the temperature readings in both Celsius and Fahrenheit.
-Step 6: Troubleshoot and Refine
-•	Check Connections: Ensure that all connections are made correctly on the breadboard and the Arduino.
-•	Adjust Code: If needed, tweak the code to improve accuracy or change the format of the output.
-Step 7: Save Your Work
-•	Stop Simulation: Click "Stop Simulation" to end the simulation.
-•	Save the Circuit: Click "Save" to keep your circuit design and code for future use.
-
-## Program:
-
-## Output:
+1.	Arduino Uno R3
+2.	HC-SR04 Ultrasonic Distance Sensor
+3.	Jumper Wires
+4.	USB Cable (for simulation purpose in Tinkercad)
 
    
+## Theory:
 
-## Result:
+The ultrasonic distance sensor (HC-SR04) is a widely used electronic component for non-contact distance measurement. It operates on the principle of echo-ranging, where it emits an ultrasonic pulse and listens for its reflection from an object. The time taken for the echo to return is directly proportional to the distance of the object from the sensor. This sensor has two main pins—Trigger and Echo. The Trigger pin is used to send a short pulse (usually 10 microseconds), and the Echo pin receives the reflected signal. The Arduino microcontroller calculates the time interval between sending and receiving the ultrasonic pulse and converts it into distance using a specific formula. 
+The speed of sound in air is approximately 343 meters per second (or 0.034 cm per microsecond). Since the sound travels to the object and back, the measured time is divided by 2. The formula used is: distance = (duration × 0.034) / 2. The sensor is highly suitable for robotics, object detection, and security systems where accurate distance measurement is crucial. The Arduino Uno serves as the brain of this project and controls the sensor, processes the pulse duration, and outputs the result via the serial monitor. 
+Tinkercad provides a simulation environment where this circuit can be virtually built, connected, and tested. Through this setup, users can analyze how the sensor interacts with different distances, and visualize its output in real-time without requiring physical components. This setup not only helps in understanding sensor interfacing but also enhances coding skills through implementation in the Arduino IDE. It is an ideal beginner project for learning microcontroller and sensor interfacing.
+
+
+
+## Circuit Diagram:
+
+<img width="599" height="359" alt="image" src="https://github.com/user-attachments/assets/9181bf57-1e50-4b80-ba69-37c3b3e11293" />
+
+ 
+## Procedure: //Modify the procedure based on your circuit
+
+Step 1: Set Up the Tinkercad Environment
+1.	Log in to Tinkercad: Open Tinkercad in your web browser and log into your account.
+2.	Create a New Circuit: In the Tinkercad dashboard, click on “Circuits”, then select “Create New Circuit” to open a new workspace.
+Step 2: Add Components to the Circuit
+3.	Arduino Uno: Drag and drop an Arduino Uno R3 board from the components panel onto the workspace.
+4.	Ultrasonic Sensor: Search for the HC-SR04 Ultrasonic Distance Sensor and place it on the workspace.
+5.	Wires: Use jumper wires to make electrical connections between components.
+Step 3: Connect the Ultrasonic Sensor to the Arduino
+6.	Ultrasonic Sensor Pins:
+o	VCC Pin: Connect to 5V pin on the Arduino.
+o	GND Pin: Connect to GND on the Arduino.
+o	Trig Pin: Connect to Digital Pin 3 on the Arduino.
+o	Echo Pin: Connect to Digital Pin 2 on the Arduino.
+
+
+7.	Wire Connections:
+o	Use the color-coded jumper wires (e.g., red for VCC, black for GND, green for Trig, and blue for Echo) to make it easier to identify connections.
+Step 4: Write the Arduino Code
+8.	Open Code Editor: Click on the “Code” button at the top right and switch to “Text” mode to write the code in C/C++.
+Step 5: Simulate the Circuit
+10.	Start Simulation: Click the green “Start Simulation” button at the top of the workspace to run the circuit and code.
+11.	Monitor Output: Click the “Serial Monitor” at the bottom to view the live distance values being measured by the sensor in centimeters.
+Step 6: Test and Validate
+12.	Change Object Distance: Move the virtual object in front of the ultrasonic sensor and observe changes in distance readings in the serial monitor.
+13.	Check Accuracy: Ensure the distance measurements vary correctly based on the object’s position.
+Step 7: Save Your Work
+14.	Stop Simulation: Click the “Stop Simulation” button to end the test.
+15.	Save Circuit: Click “Save” to store your design and code for future use or presentation.
+
+
+## Code:
+```cpp
+#define ultraPin 7
+
+long duration;
+int distance;
+
+void setup() {
+  pinMode(ultraPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  pinMode(ultraPin, OUTPUT);
+  digitalWrite(ultraPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(ultraPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(ultraPin, LOW);
+
+  pinMode(ultraPin, INPUT);
+  duration = pulseIn(ultraPin, HIGH);
+
+  distance = duration * 0.034 / 2;
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+}
+```
+
+
+## Output:
+<img width="597" height="432" alt="image" src="https://github.com/user-attachments/assets/79c59126-f359-4d40-8e1c-b65ce2005cd0" />
+
+<img width="735" height="249" alt="image" src="https://github.com/user-attachments/assets/bf755829-6a07-43d2-9d9d-b8987e59c8a3" />
+
+
+
+## Result
+Motion was successfully detected using the PIR sensor. The Arduino activated the LED when motion occurred and turned it off when idle, confirming proper sensor operation and code execution.
+
+
+
 
